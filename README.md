@@ -4,84 +4,126 @@ A modern, production-ready template for building full-stack React applications u
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
 
-## Features
+## 📋 Table of Contents
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+1. [Introduction](#introduction)
+2. [Tech Stack](#tech-stack)
+3. [Features](#features)
+4. [Quick Start](#quick-start)
+5. [Project Structure](#project-structure)
+6. [Development](#development)
 
-## Getting Started
+## 🚀 Introduction
+
+This is a modern CRUD (Create, Read, Update, Delete) application built with React Router V7 and Supabase. The application demonstrates how to implement a full-featured todo management system using the latest web technologies. It showcases the power of React Router V7's configuration-based routing combined with Supabase's real-time database capabilities, all wrapped in a beautiful, responsive UI built with Tailwind CSS.
+
+## ⚙️ Tech Stack
+
+- **React 19** – Latest version of React for building the user interface
+- **React Router V7** – For advanced routing and data management
+- **Supabase** – Backend as a Service (BaaS) for database and authentication
+- **TypeScript** – For type safety and better developer experience
+- **Tailwind CSS 4** – For utility-first styling
+- **Vite** – Next generation frontend tooling
+- **Docker** – For containerization and easy deployment
+
+## ⚡️ Features
+
+- **CRUD Operations:**  
+  Complete todo management with create, read, update, and delete functionality.
+  
+- **Modern Routing:**  
+  Utilizes React Router V7's latest features for efficient routing and data handling.
+
+- **Real-time Updates:**  
+  Integration with Supabase for real-time data synchronization.
+
+- **Type Safety:**  
+  Full TypeScript implementation for robust type checking.
+
+- **Responsive Design:**  
+  Mobile-first approach with Tailwind CSS for a beautiful UI across all devices.
+
+- **Containerized:**  
+  Docker support for consistent development and deployment environments.
+
+## 👌 Quick Start
+
+### Prerequisites
+
+- Node.js (Latest LTS version)
+- npm or yarn
+- Docker (optional)
+- Supabase account
 
 ### Installation
 
-Install the dependencies:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ahmettoprakcioglu/React-Router-V7-CRUD-APP.git
+   cd React-Router-V7-CRUD-APP
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Set up environment variables:
+   - Create a `.env` file based on `.env.example`
+   - Add your Supabase credentials
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+### Docker Setup
 
 ```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
+# Build the container
+docker build -t react-router-crud .
 
 # Run the container
-docker run -p 3000:3000 my-app
+docker run -p 3000:3000 react-router-crud
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
+## 🗂 Project Structure
 
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+├── app/
+│   ├── components/     # Reusable UI components
+│   ├── routes/        # Route components and logic
+│   ├── root.tsx       # Root component
+│   └── supabase-client.ts # Supabase configuration
+├── public/            # Static assets
+├── .react-router/     # Router configuration
+├── react-router.config.ts # Router setup
+└── vite.config.ts    # Vite configuration
 ```
 
-## Styling
+## 🛠 Development
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+### Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run typecheck` - Run type checking
+
+### Type Safety
+
+The project uses TypeScript for type safety. Run type checking with:
+```bash
+npm run typecheck
+```
 
 ---
 
-Built with ❤️ using React Router.
+## 📝 License
+
+This project is open source and available under the MIT License.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
