@@ -117,13 +117,3 @@ The project uses TypeScript for type safety. Run type checking with:
 ```bash
 npm run typecheck
 ```
-
----
-
-## 📝 License
-
-This project is open source and available under the MIT License.
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
